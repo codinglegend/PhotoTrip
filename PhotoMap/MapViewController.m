@@ -41,8 +41,8 @@
 
   MKPointAnnotation *pin = [[MKPointAnnotation alloc] init];
   CLLocationCoordinate2D startPoint;
-  startPoint.latitude = 49.268950;
-  startPoint.longitude = -123.153739;
+  startPoint.latitude = 49.281844;
+  startPoint.longitude = -123.108162;
   pin.coordinate = startPoint;
   pin.title = @"start point";
 
@@ -149,7 +149,7 @@
 didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
   //Here you would want to re-request startupdatinglocation
   // if given authorization
-  //[_locationManager startUpdatingLocation];
+  [_locationManager startUpdatingLocation];
 
 }
 
