@@ -35,9 +35,9 @@
 
   initialLocationSet = false;
   _locationManager = [[CLLocationManager alloc] init];
+    _locationManager.delegate = self;
   [_locationManager requestWhenInUseAuthorization];
   [_locationManager startUpdatingLocation];
-  _locationManager.delegate = self;
 
   MKPointAnnotation *pin = [[MKPointAnnotation alloc] init];
   CLLocationCoordinate2D startPoint;

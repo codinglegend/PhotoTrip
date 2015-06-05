@@ -21,6 +21,7 @@
 		96EBB0D81B1F891500D4B281 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96EBB0D71B1F891500D4B281 /* CoreLocation.framework */; };
 		96EBB0DB1B1FDE7A00D4B281 /* Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = 96EBB0DA1B1FDE7A00D4B281 /* Trip.m */; };
 		96EBB0DF1B1FDE7A00D4B281 /* Pin.m in Sources */ = {isa = PBXBuildFile; fileRef = 96EBB0DE1B1FDE7A00D4B281 /* Pin.m */; };
+		B571ACC81B222D1100CAC658 /* location.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B571ACC71B222D1100CAC658 /* location.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		96EBB0DA1B1FDE7A00D4B281 /* Trip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trip.m; sourceTree = "<group>"; };
 		96EBB0DD1B1FDE7A00D4B281 /* Pin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pin.h; sourceTree = "<group>"; };
 		96EBB0DE1B1FDE7A00D4B281 /* Pin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pin.m; sourceTree = "<group>"; };
+		B571ACC71B222D1100CAC658 /* location.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = location.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				96EBB0D91B1FDE7A00D4B281 /* Trip.h */,
 				96EBB0DA1B1FDE7A00D4B281 /* Trip.m */,
 				96EBB0631B1E363300D4B281 /* Main.storyboard */,
+				B571ACC71B222D1100CAC658 /* location.gpx */,
 				96EBB0661B1E363300D4B281 /* Images.xcassets */,
 				96EBB0681B1E363300D4B281 /* LaunchScreen.xib */,
 				96EBB05D1B1E363300D4B281 /* PhotoMap.xcdatamodeld */,
@@ -174,6 +177,7 @@
 			files = (
 				96EBB0651B1E363300D4B281 /* Main.storyboard in Resources */,
 				96EBB06A1B1E363300D4B281 /* LaunchScreen.xib in Resources */,
+				B571ACC81B222D1100CAC658 /* location.gpx in Resources */,
 				96EBB0671B1E363300D4B281 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
