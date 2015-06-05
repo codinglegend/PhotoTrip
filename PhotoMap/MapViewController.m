@@ -39,14 +39,15 @@
   [_locationManager requestWhenInUseAuthorization];
   [_locationManager startUpdatingLocation];
 
-  MKPointAnnotation *pin = [[MKPointAnnotation alloc] init];
-  CLLocationCoordinate2D startPoint;
-  startPoint.latitude = 49.281844;
-  startPoint.longitude = -123.108162;
-  pin.coordinate = startPoint;
-  pin.title = @"start point";
-
-  [self.tripMapView addAnnotation:pin];
+// this is where you can place a second pin
+//  MKPointAnnotation *pin = [[MKPointAnnotation alloc] init];
+//  CLLocationCoordinate2D startPoint;
+//  startPoint.latitude = 49.281844;
+//  startPoint.longitude = -123.108162;
+//  pin.coordinate = startPoint;
+//  pin.title = @"start point";
+//
+//  [self.tripMapView addAnnotation:pin];
 
 
   [self setupImagePicker];
@@ -157,10 +158,17 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
             viewForAnnotation:(id<MKAnnotation>)annotation{
 
   if (annotation == self.tripMapView.userLocation){
-    return nil; //default to blue dot
+      
+      MKPinAnnotationView *pinViewStart = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:nil];
+      
+      [pinViewStart setPinColor:MKPinAnnotationColorPurple];
+      
+      return pinViewStart;
+    
   }
+    
   NSLog(@"%f, %f", annotation.coordinate.longitude,  annotation.coordinate.latitude);
-  static NSString* annotationIdentifier = @"startpoint";
+  static NSString* annotationIdentifier = @"startpoint"; // second pin
 
   MKPinAnnotationView* pinView = (MKPinAnnotationView *)
   [self.tripMapView dequeueReusableAnnotationViewWithIdentifier:annotationIdentifier];
