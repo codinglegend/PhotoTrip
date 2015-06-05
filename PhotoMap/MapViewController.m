@@ -7,6 +7,7 @@
 //
 
 #import "MapViewController.h"
+#import <Photos/Photos.h>
 
 @interface MapViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate, MKMapViewDelegate, CLLocationManagerDelegate>{
 
@@ -57,6 +58,10 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
   UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    
+    PHAsset *asset = [[PHAsset fetchAssetsWithALAssetURLs:@[info[UIImagePickerControllerReferenceURL]] options:nil] firstObject];
+    NSLog(@"Location: %@", asset.location);
+    
   [self dismissViewControllerAnimated:YES completion:^{
     [self showImageAsAPin:chosenImage];
   }];
